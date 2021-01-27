@@ -1,7 +1,9 @@
 import 'dart:async';
 
+import 'package:blood_app/connexio.dart';
 import 'package:flutter/material.dart';
 import 'second_screen.dart';
+import '';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -21,37 +23,34 @@ class StartState extends State<SplashScreen> {
   }
 
   startTimer() async {
-    var duration = Duration(seconds: 10);
+    var duration = Duration(seconds: 5);
     return new Timer(duration, route);
   }
 
   route() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => SecondScreen()));
+        context, MaterialPageRoute(builder: (context) => Connexion()));
   }
 
   initScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Image.asset(
-                "asstest/images/redhope.PNG",
-                width: 100,
-              ),
+              child: Image.asset("asstets/images/logo_redhope.jpg"),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             Text(
-              "Splash Screen",
-              style: TextStyle(fontSize: 20.0, color: Colors.white),
+              "Welcome to redHope",
+              style: TextStyle(fontSize: 20.0, color: Colors.red),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             CircularProgressIndicator(
-              backgroundColor: Colors.white,
-              strokeWidth: 1,
+              backgroundColor: Colors.red,
+              strokeWidth: 2,
             )
           ],
         ),

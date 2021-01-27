@@ -20,10 +20,13 @@ class _ConnexionState extends State<Connexion> {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
-          child: ListView(children: <Widget>[
-            Image.asset('asstets/images/redhope.PNG'),
+          child: Column(children: <Widget>[
             SizedBox(
               height: 80,
+            ),
+            Image.asset('asstets/images/redhope.PNG', width: 250),
+            SizedBox(
+              height: 120,
             ),
             SignInButton(
                 buttonType: ButtonType.google,
