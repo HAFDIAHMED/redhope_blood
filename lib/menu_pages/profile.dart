@@ -1,0 +1,124 @@
+/// lib/presentation/home/pages/home_page.dart
+import 'package:flutter/material.dart';
+import '../presentation1.dart';
+import '../besoin.dart';
+
+class Profile extends StatelessWidget {
+  static Route<dynamic> route() => MaterialPageRoute(
+        builder: (context) => Profile(),
+      );
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text("profil",
+            style: TextStyle(
+              //fontSize: 17,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            )),
+      ),
+      body: ListView(children: <Widget>[
+        SizedBox(height: 30),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.all(20.0),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: Offset(0, 3),
+              )
+            ],
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: Column(
+            children: [
+              Image.asset(
+                'asstets/images/redhope.PNG',
+                width: 130,
+              ),
+              Row(children: <Widget>[
+                Image.asset(
+                  'asstets/images/as.png',
+                  width: 50,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  children: [
+                    Text(" Testeur Testeur",
+                        //textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        )),
+                    Text(" \nDate de naissance\n",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        )),
+                  ],
+                ),
+              ]),
+
+              Text("00/01/1998",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red,
+                  )),
+
+              // SizedBox(height: 30),
+            ],
+          ),
+        ),
+        Center(
+          child: RaisedButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: BorderSide(color: Colors.red)),
+            color: Colors.red,
+            textColor: Colors.white,
+            child: Text("Donner du sang "),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Presentation1()),
+              );
+            },
+          ),
+        ),
+        SizedBox(
+          width: 10,
+        ),
+        Center(
+          child: RaisedButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: BorderSide(color: Colors.red)),
+            color: Colors.red,
+            textColor: Colors.white,
+            child: Text("Demande de sang"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Besoin()),
+              );
+            },
+          ),
+        )
+      ]),
+    );
+  }
+}
