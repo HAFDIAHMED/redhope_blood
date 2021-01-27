@@ -53,6 +53,7 @@ flutter:
      - asstets/images/inoov_logo.PNG
      - asstets/images/redhope.PNG
      - asstets/images/as.png
+     - asstest/images/logo.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

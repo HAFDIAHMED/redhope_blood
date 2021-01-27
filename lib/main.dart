@@ -13,6 +13,7 @@ import './tabs/pages/tabs_page.dart';
 import 'connexio.dart';
 import 'popup.dart';
 import 'operation.dart';
+import 'splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Screen(),
+      home: SplashScreen(),
     );
   }
 }
