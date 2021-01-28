@@ -14,6 +14,7 @@ import 'connexio.dart';
 import 'popup.dart';
 import 'operation.dart';
 import './splash/splash_screen.dart';
+import './menu_pages/profile.dart';
 
 void main() {
   runApp(MyApp());

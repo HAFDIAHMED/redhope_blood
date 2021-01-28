@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:blood_app/connexio.dart';
 import 'package:flutter/material.dart';
-import 'second_screen.dart';
-import '';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -40,18 +38,22 @@ class StartState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Image.asset("asstets/images/logo_redhope.jpg"),
+              child: Image.asset("asstets/images/redhope.PNG"),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             Text(
-              "Welcome to redHope",
+              "Welcome to RedHope",
               style: TextStyle(fontSize: 20.0, color: Colors.red),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             CircularProgressIndicator(
               backgroundColor: Colors.red,
               strokeWidth: 2,
-            )
+            ),
+            Container(
+              child: Image.asset("asstets/images/inoov_logo.PNG"),
+            ),
+            Padding(padding: EdgeInsets.only(top: 20.0)),
           ],
         ),
       ),

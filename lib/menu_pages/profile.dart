@@ -71,13 +71,105 @@ class Profile extends StatelessWidget {
                 ),
               ]),
 
-              Text("00/01/1998",
+              Text("03/08/1998",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     color: Colors.red,
                   )),
+
+              // SizedBox(height: 30),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.all(20.0),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: Offset(0, 3),
+              )
+            ],
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: Column(
+            children: [
+              Row(children: <Widget>[
+                SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  children: [
+                    Text(" Dons : ",
+                        //textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        )),
+                    Text("\n 0 ",
+                        //textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        )),
+                  ],
+                ),
+                VerticalDivider(
+                  color: Colors.black,
+                  width: 30,
+                ),
+                Column(
+                  children: [
+                    Text(" Team : ",
+                        //textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        )),
+                    Text("\n ... ",
+                        //textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        )),
+                  ],
+                ),
+                VerticalDivider(
+                  color: Colors.blue,
+                  width: 30,
+                ),
+                Column(
+                  children: [
+                    Text(" Points : ",
+                        //textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        )),
+                    Text("\n 0 ",
+                        //textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        )),
+                  ],
+                ),
+              ]),
 
               // SizedBox(height: 30),
             ],
