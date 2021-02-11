@@ -195,6 +195,64 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(
+          height: 30,
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.all(20.0),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: Offset(0, 3),
+              )
+            ],
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: Column(
+            children: [
+              Image.asset(
+                'asstets/images/img28.jpg',
+                width: 300,
+              ),
+              Text("le titre du blog titre titre titre  ",
+                  //textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  )),
+              Text(
+                  "\nLorem ipsum dolor sit amet \n Lorem ipsum dolor sit amet \n Lorem ipsum dolor sit amet\n  Lorem ipsum dolor sit amet ",
+                  //textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 17,
+                    color: Colors.black,
+                  )),
+              SizedBox(height: 30),
+              Center(
+                child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      side: BorderSide(color: Colors.blue)),
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  child: Text("Lire la suite"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Blog()),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
       ]),
     );
   }

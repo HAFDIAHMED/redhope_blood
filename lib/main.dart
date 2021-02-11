@@ -1,3 +1,4 @@
+import 'package:blood_app/menu_pages/hoperace.dart';
 import 'package:flutter/material.dart';
 import 'package:sign_button/sign_button.dart';
 import './demande1.dart';
@@ -15,6 +16,8 @@ import 'popup.dart';
 import 'operation.dart';
 import './splash/splash_screen.dart';
 import './menu_pages/profile.dart';
+import './chat_model.dart';
+import 'dart:async';
 
 void main() {
   runApp(MyApp());
@@ -35,6 +38,124 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class TimerApp extends StatefulWidget {
+  @override
+  _TimerAppState createState() => _TimerAppState();
+}
+
+class _TimerAppState extends State<TimerApp> {
+  static const duration = const Duration(seconds: 1);
+
+  int secondsPassed = 0;
+  bool isActive = false;
+
+  Timer timer;
+
+  void handleTick() {
+    if (isActive) {
+      setState(() {
+        secondsPassed = secondsPassed + 1;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (timer == null) {
+      timer = Timer.periodic(duration, (Timer t) {
+        handleTick();
+      });
+    }
+    int seconds = secondsPassed % 60;
+    int minutes = secondsPassed ~/ 60;
+    int hours = secondsPassed ~/ (60 * 60);
+
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.teal[50],
+          appBar: AppBar(
+            backgroundColor: Colors.teal[300],
+            title: Center(
+              child: Text('Timer'),
+            ),
+          ),
+          body: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    LabelText(
+                        label: 'HRS', value: hours.toString().padLeft(2, '0')),
+                    LabelText(
+                        label: 'MIN',
+                        value: minutes.toString().padLeft(2, '0')),
+                    LabelText(
+                        label: 'SEC',
+                        value: seconds.toString().padLeft(2, '0')),
+                  ],
+                ),
+                SizedBox(height: 60),
+                Container(
+                  width: 200,
+                  height: 47,
+                  margin: EdgeInsets.only(top: 30),
+                  child: RaisedButton(
+                    color: Colors.pink[200],
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25)),
+                    child: Text(isActive ? 'STOP' : 'START'),
+                    onPressed: () {
+                      setState(() {
+                        isActive = !isActive;
+                      });
+                    },
+                  ),
+                )
+              ],
+            ),
+          ),
+        ));
+  }
+}
+
+class LabelText extends StatelessWidget {
+  LabelText({this.label, this.value});
+
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 5),
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
+        color: Colors.teal,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Text(
+            '$value',
+            style: TextStyle(
+                color: Colors.white, fontSize: 55, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            '$label',
+            style: TextStyle(
+              color: Colors.white70,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -48,63 +169,44 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: ListView(children: <Widget>[
-            Image.asset('asstets/images/logo_redhope.jpg'),
-            SignInButton(
-                buttonType: ButtonType.google,
-                imagePosition: ImagePosition.left,
-                buttonSize: ButtonSize.large,
-                btnTextColor: Colors.grey,
-                btnColor: Colors.white,
-                width: 140,
-                btnText: 'Google',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Screen()),
-                  );
-                }),
-            SizedBox(
-              height: 40,
-            ),
-            SignInButton(
-                buttonType: ButtonType.facebook,
-                imagePosition: ImagePosition.left,
-                buttonSize: ButtonSize.large,
-                btnTextColor: Colors.grey,
-                btnColor: Colors.white,
-                width: 140,
-                btnText: 'Facebook',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Screen()),
-                  );
-                }),
-            SizedBox(
-              height: 40,
-            ),
-            SignInButton(
-                buttonType: ButtonType.mail,
-                imagePosition: ImagePosition.left,
-                buttonSize: ButtonSize.large,
-                btnTextColor: Colors.grey,
-                btnColor: Colors.white,
-                width: 140,
-                btnText: 'email',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Screen()),
-                  );
-                })
-          ]),
+      body: Container(
+        child: ListView.builder(
+          itemCount: ChatModel.dummyData.length,
+          itemBuilder: (context, index) {
+            ChatModel _model = ChatModel.dummyData[index];
+            return Column(
+              children: <Widget>[
+                Divider(
+                  height: 12.0,
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    radius: 24.0,
+                    backgroundImage: NetworkImage(_model.avatarUrl),
+                  ),
+                  title: Row(
+                    children: <Widget>[
+                      Text(_model.name),
+                      SizedBox(
+                        width: 16.0,
+                      ),
+                      Text(
+                        _model.datetime,
+                        style: TextStyle(fontSize: 12.0),
+                      ),
+                    ],
+                  ),
+                  subtitle: Text(_model.message),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    size: 14.0,
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
-    ));
+    );
   }
 }
