@@ -28,7 +28,6 @@ class _ChallengeState extends State<Challenge> {
             padding: const EdgeInsets.all(8.0),
             child: Center(
               child: ListView(children: <Widget>[
-                Image.asset('asstets/images/redhope.PNG'),
                 SizedBox(height: 30),
                 Container(
                   height: 400,
@@ -48,182 +47,98 @@ class _ChallengeState extends State<Challenge> {
                   ),
                   child: Column(
                     children: [
-                      Text("Demande de sang",
+                      Text("Challenges",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.red,
+                            color: Colors.black,
                           )),
                       SizedBox(
                         height: 30,
                       ),
                       Row(children: [
-                        Text("Besoin ",
+                        Text("Inviter un ami ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
-                            )),
-                        Text("                            ..... ",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
                             )),
                       ]),
                       Divider(
                         color: Colors.black,
                       ),
                       Row(children: [
-                        Text("Groupage ",
+                        Text("Partager l'application ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
-                            )),
-                        Text("                       .....",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
                             )),
                       ]),
                       Divider(
                         color: Colors.black,
                       ),
                       Row(children: [
-                        Text("Motif ",
+                        Text("Faire un don ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
-                            )),
-                        Text("                               .....",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
                             )),
                       ]),
                       Divider(
                         color: Colors.black,
                       ),
                       Row(children: [
-                        Text("Message :\n",
+                        Text("Noter l'application ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
                             )),
-                        Text("..... ",
+                      ]),
+                      Divider(
+                        color: Colors.black,
+                      ),
+                      Row(children: [
+                        Text("Créer une équipe ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                              color: Colors.red,
+                            )),
+                      ]),
+                      Divider(
+                        color: Colors.black,
+                      ),
+                      Row(children: [
+                        Text("Lire un article",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red,
+                            )),
+                      ]),
+                      Divider(
+                        color: Colors.black,
+                      ),
+                      Row(children: [
+                        Text("Suivez nous",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red,
                             )),
                       ]),
                       SizedBox(height: 80),
-                      Center(
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(color: Colors.red)),
-                          color: Colors.red,
-                          textColor: Colors.white,
-                          child: Text("Aider"),
-                          onPressed: () {
-                            showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    content: Stack(
-                                      overflow: Overflow.visible,
-                                      children: <Widget>[
-                                        Positioned(
-                                          right: -40.0,
-                                          top: -40.0,
-                                          child: InkResponse(
-                                            onTap: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                            child: CircleAvatar(
-                                              child: Icon(Icons.close),
-                                              backgroundColor: Colors.red,
-                                            ),
-                                          ),
-                                        ),
-                                        Form(
-                                          //key: _formKey,
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: <Widget>[
-                                              Text(
-                                                  " Qu'est ce que je peux faire ? ",
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      fontSize: 18,
-                                                      color: Colors.red,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              SizedBox(
-                                                height: 30,
-                                              ),
-                                              Text(" Donnder du sang  ",
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                      fontSize: 18,
-                                                      color: Colors.red,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
-                                              Text(" Inviter un ami à aider ",
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                      fontSize: 18,
-                                                      color: Colors.red,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
-                                              Text("Partager",
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                      fontSize: 18,
-                                                      color: Colors.red,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
-                                              Text("Retour",
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontSize: 18,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  );
-                                });
-                          },
-                        ),
-                      ),
                     ],
                   ),
                 ),
