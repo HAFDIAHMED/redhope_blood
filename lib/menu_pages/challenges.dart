@@ -138,7 +138,6 @@ class _ChallengeState extends State<Challenge> {
                               color: Colors.red,
                             )),
                       ]),
-                      SizedBox(height: 80),
                     ],
                   ),
                 ),

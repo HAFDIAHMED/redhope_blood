@@ -1,3 +1,4 @@
+import 'package:blood_app/menu_pages/challenges.dart';
 import 'package:blood_app/menu_pages/hoperace.dart';
 import 'package:flutter/material.dart';
 import 'package:sign_button/sign_button.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: DemandeSang(),
+      home: Challenge(),
     );
   }
 }
