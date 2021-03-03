@@ -50,6 +50,7 @@ class StartState extends State<SplashScreen> {
               backgroundColor: Colors.red,
               strokeWidth: 2,
             ),
+            SizedBox(width: 60),
             Container(
               child: Image.asset("asstets/images/inoov_logo.PNG"),
             ),

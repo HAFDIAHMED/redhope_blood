@@ -18,6 +18,7 @@ import './splash/splash_screen.dart';
 import './menu_pages/profile.dart';
 import './chat_model.dart';
 import 'dart:async';
+import './menu_pages/demande_sang.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SplashScreen(),
+      home: DemandeSang(),
     );
   }
 }
