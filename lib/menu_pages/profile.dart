@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../presentation1.dart';
 import '../besoin.dart';
 import 'dart:async';
+import 'package:flutter/gestures.dart';
+import 'challenges.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -227,12 +229,21 @@ class _ProfileState extends State<Profile> {
               Row(
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    "Gagner plus de points >>>",
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.red,
-                        fontWeight: FontWeight.bold),
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      text: 'Gagnez plus de poitnts >>>',
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.red,
+                          fontWeight: FontWeight.bold),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Challenge()),
+                            ),
+                    ),
                   ),
                 ],
               ),
