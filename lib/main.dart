@@ -1,5 +1,6 @@
 import 'package:blood_app/menu_pages/challenges.dart';
 import 'package:blood_app/menu_pages/hoperace.dart';
+import 'package:blood_app/menu_pages/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:sign_button/sign_button.dart';
 import './demande1.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Hoperace(),
+      home: Notifi(),
     );
   }
 }
