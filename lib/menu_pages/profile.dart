@@ -144,7 +144,7 @@ class _ProfileState extends State<Profile> {
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         )),
-                    Text("\n 0 ",
+                    Text("\n 1 ",
                         //textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16,
@@ -166,7 +166,7 @@ class _ProfileState extends State<Profile> {
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         )),
-                    Text("\n ... ",
+                    Text("\n Team 1 ",
                         //textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16,
@@ -188,7 +188,7 @@ class _ProfileState extends State<Profile> {
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         )),
-                    Text("\n 0 ",
+                    Text("\n 27 ",
                         //textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16,
@@ -200,6 +200,56 @@ class _ProfileState extends State<Profile> {
               ]),
 
               // SizedBox(height: 30),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.all(20.0),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: Offset(0, 3),
+              )
+            ],
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Row(
+                //mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "1 ",
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Image.asset(
+                    'asstets/images/as.png',
+                    width: 50,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "testeur",
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
