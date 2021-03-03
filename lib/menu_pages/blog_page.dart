@@ -44,6 +44,18 @@ class Blog extends StatelessWidget {
                 fontSize: 15,
                 color: Colors.black,
               )),
+          PopupMenuButton(
+            itemBuilder: (BuildContext bc) => [
+              PopupMenuItem(child: Text("Enregistrer"), value: "/newchat"),
+              PopupMenuItem(child: Text("Partager"), value: "/new-group-chat"),
+              PopupMenuItem(child: Text("Signaler"), value: "/settings"),
+            ],
+            onSelected: (route) {
+              print(route);
+              // Note You must create respective pages for navigation
+              Navigator.pushNamed(context, route);
+            },
+          ),
         ]),
         Text(
             "\n     Lorem ipsum dolor sit amet\n     Lorem ipsum dolor sit amet\n     Lorem ipsum dolor sit amet\n     Lorem ipsum dolor sit amet\n     Lorem ipsum dolor sit amet",
