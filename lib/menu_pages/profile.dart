@@ -218,7 +218,7 @@ class _ProfileState extends State<Profile> {
                 offset: Offset(0, 3),
               )
             ],
-            color: Colors.red,
+            color: Colors.white,
             borderRadius: BorderRadius.circular(25),
           ),
           child: Column(
@@ -228,24 +228,10 @@ class _ProfileState extends State<Profile> {
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "1 ",
+                    "Gagner plus de points >>>",
                     style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Image.asset(
-                    'asstets/images/as.png',
-                    width: 50,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "testeur",
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
+                        fontSize: 20,
+                        color: Colors.red,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
