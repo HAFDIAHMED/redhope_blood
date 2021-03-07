@@ -5,6 +5,8 @@ import '../besoin.dart';
 import 'dart:async';
 import 'package:flutter/gestures.dart';
 import 'challenges.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -324,6 +326,41 @@ class _ProfileState extends State<Profile> {
           ),
         )
       ]),
+      floatingActionButton: SpeedDial(
+        // both default to 16
+        marginRight: 18,
+        marginBottom: 20,
+        animatedIcon: AnimatedIcons.menu_close,
+        animatedIconTheme: IconThemeData(size: 22.0),
+
+        //visible: _dialVisible,
+
+        closeManually: false,
+        curve: Curves.bounceIn,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.5,
+        onOpen: () => {},
+        onClose: () => {},
+        tooltip: 'Speed Dial',
+        heroTag: 'speed-dial-hero-tag',
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 8.0,
+        shape: CircleBorder(),
+        children: [
+          SpeedDialChild(
+              child: Icon(FontAwesomeIcons.productHunt),
+              backgroundColor: Colors.orange,
+              label: '',
+              labelStyle: TextStyle(fontSize: 18.0),
+              onTap: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Profile()),
+                    )
+                  }),
+        ],
+      ),
     );
   }
 }
