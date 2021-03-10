@@ -328,7 +328,7 @@ class _ProfileState extends State<Profile> {
       ]),
       floatingActionButton: SpeedDial(
         // both default to 16
-        marginRight: 18,
+
         marginBottom: 20,
         animatedIcon: AnimatedIcons.menu_close,
         animatedIconTheme: IconThemeData(size: 22.0),

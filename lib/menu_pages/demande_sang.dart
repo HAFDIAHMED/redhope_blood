@@ -207,13 +207,6 @@ class _DemandeSangState extends State<DemandeSang> {
                                               Divider(
                                                 color: Colors.black,
                                               ),
-                                              Text("Retour",
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontSize: 18,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
                                             ],
                                           ),
                                         ),
