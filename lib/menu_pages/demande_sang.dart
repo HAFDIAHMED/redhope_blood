@@ -169,9 +169,8 @@ class _DemandeSangState extends State<DemandeSang> {
                                             decoration: new BoxDecoration(
                                               shape: BoxShape.rectangle,
                                               color: const Color(0xFFFFFF),
-                                              borderRadius: new BorderRadius
-                                                      .all(
-                                                  new Radius.circular(32.0)),
+                                              borderRadius:
+                                                  BorderRadius.circular(25),
                                             ),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
