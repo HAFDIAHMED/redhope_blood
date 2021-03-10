@@ -163,48 +163,59 @@ class _DemandeSangState extends State<DemandeSang> {
                                         ),
                                         Form(
                                           //key: _formKey,
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: <Widget>[
-                                              Text(
-                                                  " Qu'est ce que je peux faire ? ",
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                      fontSize: 18,
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              SizedBox(
-                                                height: 30,
-                                              ),
-                                              Text(" Donner du sang  ",
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                      fontSize: 18,
-                                                      color: Colors.red,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
-                                              Text(" Inviter un ami à aider ",
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                      fontSize: 18,
-                                                      color: Colors.red,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
-                                              Text("Partager",
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                      fontSize: 18,
-                                                      color: Colors.red,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                            ],
+                                          child: Container(
+                                            width: 260.0,
+                                            height: 230.0,
+                                            decoration: new BoxDecoration(
+                                              shape: BoxShape.rectangle,
+                                              color: const Color(0xFFFFFF),
+                                              borderRadius: new BorderRadius
+                                                      .all(
+                                                  new Radius.circular(32.0)),
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: <Widget>[
+                                                Text(
+                                                    " Qu'est ce que je peux faire ? ",
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                        fontSize: 18,
+                                                        color: Colors.black,
+                                                        fontWeight:
+                                                            FontWeight.bold)),
+                                                SizedBox(
+                                                  height: 30,
+                                                ),
+                                                Text(" Donner du sang  ",
+                                                    textAlign: TextAlign.left,
+                                                    style: TextStyle(
+                                                        fontSize: 18,
+                                                        color: Colors.red,
+                                                        fontWeight:
+                                                            FontWeight.bold)),
+                                                Divider(
+                                                  color: Colors.black,
+                                                ),
+                                                Text(" Inviter un ami à aider ",
+                                                    textAlign: TextAlign.left,
+                                                    style: TextStyle(
+                                                        fontSize: 18,
+                                                        color: Colors.red,
+                                                        fontWeight:
+                                                            FontWeight.bold)),
+                                                Divider(
+                                                  color: Colors.black,
+                                                ),
+                                                Text("Partager",
+                                                    textAlign: TextAlign.left,
+                                                    style: TextStyle(
+                                                        fontSize: 18,
+                                                        color: Colors.red,
+                                                        fontWeight:
+                                                            FontWeight.bold)),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ],
