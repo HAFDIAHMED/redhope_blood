@@ -167,7 +167,7 @@ class _DemandeSangState extends State<DemandeSang> {
                                             width: 260.0,
                                             height: 230.0,
                                             decoration: new BoxDecoration(
-                                              shape: BoxShape.rectangle,
+                                              //shape: BoxShape.rectangle,
                                               color: const Color(0xFFFFFF),
                                               borderRadius:
                                                   BorderRadius.circular(25),
