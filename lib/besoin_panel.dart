@@ -39,12 +39,19 @@ class _BesoinPanelState extends State<BesoinPanel> {
           Icons.local_hospital_sharp,
           color: Colors.red,
         )),
-    const Item(
-        'je sais pas',
+         const Item(
+        'Autres',
         Icon(
           Icons.local_hospital_sharp,
           color: Colors.red,
         )),
+    const Item(
+        'je ne sais pas',
+        Icon(
+          Icons.local_hospital_sharp,
+          color: Colors.red,
+        )),
+
   ];
   @override
   Widget build(BuildContext context) {

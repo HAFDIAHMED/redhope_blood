@@ -171,13 +171,13 @@ class _DemandeSangState extends State<DemandeSang> {
                                                   textAlign: TextAlign.center,
                                                   style: TextStyle(
                                                       fontSize: 18,
-                                                      color: Colors.red,
+                                                      color: Colors.black,
                                                       fontWeight:
                                                           FontWeight.bold)),
                                               SizedBox(
                                                 height: 30,
                                               ),
-                                              Text(" Donnder du sang  ",
+                                              Text(" Donner du sang  ",
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
                                                       fontSize: 18,
