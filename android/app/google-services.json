@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "717672149765",
+    "project_id": "redhope-blood",
+    "storage_bucket": "redhope-blood.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717672149765:android:820f0c4394aaab637e3d6c",
+        "android_client_info": {
+          "package_name": "com.example.blood_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717672149765-60cctugoc1cgvug4ib3l6c7cnn4bto0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzIar0CSPcA4fmXlIcEH1ZMOR80l5UlBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717672149765-60cctugoc1cgvug4ib3l6c7cnn4bto0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
