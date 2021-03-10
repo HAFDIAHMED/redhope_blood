@@ -204,9 +204,6 @@ class _DemandeSangState extends State<DemandeSang> {
                                                       color: Colors.red,
                                                       fontWeight:
                                                           FontWeight.bold)),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
                                             ],
                                           ),
                                         ),
