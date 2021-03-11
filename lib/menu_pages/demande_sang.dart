@@ -170,7 +170,7 @@ class _DemandeSangState extends State<DemandeSang> {
                                               //shape: BoxShape.rectangle,
                                               color: const Color(0xFFFFFF),
                                               borderRadius:
-                                                  BorderRadius.circular(25),
+                                                  BorderRadius.circular(40),
                                             ),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
