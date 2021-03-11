@@ -145,6 +145,9 @@ class _DemandeSangState extends State<DemandeSang> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(2.0))),
                                     content: Stack(
                                       overflow: Overflow.visible,
                                       children: <Widget>[
