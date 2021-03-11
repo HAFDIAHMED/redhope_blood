@@ -147,7 +147,7 @@ class _DemandeSangState extends State<DemandeSang> {
                                   return AlertDialog(
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
-                                            Radius.circular(2.0))),
+                                            Radius.circular(18.0))),
                                     content: Stack(
                                       overflow: Overflow.visible,
                                       children: <Widget>[
