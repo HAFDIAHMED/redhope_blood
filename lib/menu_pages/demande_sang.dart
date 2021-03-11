@@ -135,7 +135,7 @@ class _DemandeSangState extends State<DemandeSang> {
                       Center(
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
+                              borderRadius: BorderRadius.circular(20.0),
                               side: BorderSide(color: Colors.red)),
                           color: Colors.red,
                           textColor: Colors.white,
