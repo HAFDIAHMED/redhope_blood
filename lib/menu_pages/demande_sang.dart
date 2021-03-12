@@ -190,7 +190,7 @@ class _DemandeSangState extends State<DemandeSang> {
                                                   height: 30,
                                                 ),
                                                 Text(" Donner du sang  ",
-                                                    textAlign: TextAlign.left,
+                                                    textAlign: TextAlign.right,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.red,
