@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:blood_app/connexio.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -41,9 +42,12 @@ class StartState extends State<SplashScreen> {
               child: Image.asset("asstets/images/redhope.PNG"),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
-            Text(
-              "Designed by InnovEducation",
-              style: TextStyle(fontSize: 20.0, color: Colors.red),
+            InkWell(
+              child: Text(
+                'Designed by InnovEducation',
+                style: TextStyle(fontSize: 20.0, color: Colors.red),
+              ),
+              onTap: () => launch("http://innoveducation.com/"),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             CircularProgressIndicator(

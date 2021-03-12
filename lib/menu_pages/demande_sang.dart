@@ -189,8 +189,8 @@ class _DemandeSangState extends State<DemandeSang> {
                                                 SizedBox(
                                                   height: 30,
                                                 ),
-                                                Text(" Donner du sang  ",
-                                                    textAlign: TextAlign.right,
+                                                Text(" Donner du sang     ",
+                                                    textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.red,
@@ -199,8 +199,9 @@ class _DemandeSangState extends State<DemandeSang> {
                                                 Divider(
                                                   color: Colors.black,
                                                 ),
-                                                Text(" Inviter un ami à aider ",
-                                                    textAlign: TextAlign.left,
+                                                Text(
+                                                    " Inviter un ami à aider      ",
+                                                    textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.red,
@@ -210,7 +211,7 @@ class _DemandeSangState extends State<DemandeSang> {
                                                   color: Colors.black,
                                                 ),
                                                 Text("Partager",
-                                                    textAlign: TextAlign.left,
+                                                    textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.red,
