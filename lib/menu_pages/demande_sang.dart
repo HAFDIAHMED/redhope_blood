@@ -167,20 +167,20 @@ class _DemandeSangState extends State<DemandeSang> {
                                         Form(
                                           //key: _formKey,
                                           child: Container(
-                                            width: 260.0,
+                                            /*width: 260.0,
                                             height: 230.0,
                                             decoration: new BoxDecoration(
                                               //shape: BoxShape.,
                                               color: const Color(0xFFFFFF),
                                               borderRadius:
                                                   BorderRadius.circular(50),
-                                            ),
+                                            ),*/
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               children: <Widget>[
                                                 Text(
                                                     " Qu'est ce que je peux faire ? ",
-                                                    textAlign: TextAlign.center,
+                                                    textAlign: TextAlign.left,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.black,

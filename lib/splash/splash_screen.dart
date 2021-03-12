@@ -42,7 +42,7 @@ class StartState extends State<SplashScreen> {
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             Text(
-              "Welcome to RedHope",
+              "Designed by InnovEducation",
               style: TextStyle(fontSize: 20.0, color: Colors.red),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
@@ -50,7 +50,7 @@ class StartState extends State<SplashScreen> {
               backgroundColor: Colors.red,
               strokeWidth: 2,
             ),
-            SizedBox(width: 60),
+            SizedBox(height: 40),
             Container(
               child: Image.asset("asstets/images/inoov_logo.PNG"),
             ),
