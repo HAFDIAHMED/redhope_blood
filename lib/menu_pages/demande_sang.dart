@@ -135,7 +135,7 @@ class _DemandeSangState extends State<DemandeSang> {
                       Center(
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
+                              borderRadius: BorderRadius.circular(20.0),
                               side: BorderSide(color: Colors.red)),
                           color: Colors.red,
                           textColor: Colors.white,
@@ -145,6 +145,9 @@ class _DemandeSangState extends State<DemandeSang> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(18.0))),
                                     content: Stack(
                                       overflow: Overflow.visible,
                                       children: <Widget>[
@@ -164,20 +167,20 @@ class _DemandeSangState extends State<DemandeSang> {
                                         Form(
                                           //key: _formKey,
                                           child: Container(
-                                            width: 260.0,
+                                            /*width: 260.0,
                                             height: 230.0,
                                             decoration: new BoxDecoration(
-                                              //shape: BoxShape.rectangle,
+                                              //shape: BoxShape.,
                                               color: const Color(0xFFFFFF),
                                               borderRadius:
-                                                  BorderRadius.circular(25),
-                                            ),
+                                                  BorderRadius.circular(50),
+                                            ),*/
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               children: <Widget>[
                                                 Text(
                                                     " Qu'est ce que je peux faire ? ",
-                                                    textAlign: TextAlign.center,
+                                                    textAlign: TextAlign.left,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.black,
@@ -186,8 +189,8 @@ class _DemandeSangState extends State<DemandeSang> {
                                                 SizedBox(
                                                   height: 30,
                                                 ),
-                                                Text(" Donner du sang  ",
-                                                    textAlign: TextAlign.left,
+                                                Text(" Donner du sang     ",
+                                                    textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.red,
@@ -196,8 +199,9 @@ class _DemandeSangState extends State<DemandeSang> {
                                                 Divider(
                                                   color: Colors.black,
                                                 ),
-                                                Text(" Inviter un ami à aider ",
-                                                    textAlign: TextAlign.left,
+                                                Text(
+                                                    " Inviter un ami à aider      ",
+                                                    textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.red,
@@ -207,7 +211,7 @@ class _DemandeSangState extends State<DemandeSang> {
                                                   color: Colors.black,
                                                 ),
                                                 Text("Partager",
-                                                    textAlign: TextAlign.left,
+                                                    textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                         fontSize: 18,
                                                         color: Colors.red,
