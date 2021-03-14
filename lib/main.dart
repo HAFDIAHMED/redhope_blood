@@ -22,7 +22,12 @@ import './chat_model.dart';
 import 'dart:async';
 import './menu_pages/demande_sang.dart';
 
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
