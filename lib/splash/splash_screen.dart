@@ -22,7 +22,7 @@ class StartState extends State<SplashScreen> {
   }
 
   startTimer() async {
-    var duration = Duration(seconds: 5);
+    var duration = Duration(seconds: 8);
     return new Timer(duration, route);
   }
 
@@ -42,22 +42,23 @@ class StartState extends State<SplashScreen> {
               child: Image.asset("asstets/images/redhope.PNG"),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
-            InkWell(
-              child: Text(
-                'Designed by InnovEducation',
-                style: TextStyle(fontSize: 20.0, color: Colors.red),
-              ),
-              onTap: () => launch("http://innoveducation.com/"),
+            Text(
+              'Designed by',
+              style: TextStyle(fontSize: 20.0, color: Colors.red),
             ),
+            SizedBox(height: 40),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             CircularProgressIndicator(
               backgroundColor: Colors.red,
               strokeWidth: 2,
             ),
-            SizedBox(height: 40),
-            Container(
-              child: Image.asset("asstets/images/inoov_logo.PNG"),
+            InkWell(
+              child: Container(
+                child: Image.asset("asstets/images/inoov_logo.PNG"),
+              ),
+              onTap: () => launch("http://innoveducation.com/"),
             ),
+            SizedBox(height: 40),
             Padding(padding: EdgeInsets.only(top: 20.0)),
           ],
         ),

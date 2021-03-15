@@ -61,7 +61,7 @@ class _AgeState extends State<Age> {
                             RaisedButton(
                               shape: new RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18.0),
-                                  side: BorderSide(color: Colors.red)),
+                                  side: BorderSide(color: Color(0xFFFE43C3C))),
                               color: Colors.red,
                               textColor: Colors.white,
                               child: Text("OUI"),
