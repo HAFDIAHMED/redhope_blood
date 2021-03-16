@@ -1,7 +1,12 @@
+import 'package:blood_app/page/authPage.dart';
+import 'package:blood_app/widget/background_painter.dart';
 import 'package:flutter/material.dart';
 import 'package:sign_button/sign_button.dart';
 import './screen.dart';
 import './tabs/pages/tabs_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Connexion extends StatefulWidget {
   Connexion({Key key, this.title}) : super(key: key);
@@ -39,7 +44,7 @@ class _ConnexionState extends State<Connexion> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TabsPage()),
+                    MaterialPageRoute(builder: (context) => AuthPage()),
                   );
                 }),
             SizedBox(
@@ -81,4 +86,12 @@ class _ConnexionState extends State<Connexion> {
       ),
     ));
   }
+
+  Widget buildLoading() => Stack(
+        fit: StackFit.expand,
+        children: [
+          CustomPaint(painter: BackgroundPainter()),
+          Center(child: CircularProgressIndicator()),
+        ],
+      );
 }
